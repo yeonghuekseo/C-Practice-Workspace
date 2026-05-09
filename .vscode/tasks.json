@@ -1,0 +1,86 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C",
+            "type": "process",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\gcc.exe",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+                ]
+            }
+        },
+        {
+            "label": "Build C++",
+            "type": "process",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+                ]
+            }
+        },
+        {
+            "label": "Run executable",
+            "type": "process",
+            "group": "test",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+            }
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 활성 파일 빌드",
+            "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "디버거에서 생성된 작업입니다."
+        }
+    ]
+}

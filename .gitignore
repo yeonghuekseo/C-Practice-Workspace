@@ -1,0 +1,57 @@
+# Visual Studio / Windows
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Build artifacts
+*.exe
+*.dll
+*.lib
+*.obj
+*.o
+*.ilk
+*.pdb
+*.idb
+*.exp
+*.cache
+*.log
+*.out
+*.app
+
+# GCC/MinGW
+*.dll
+*.a
+*.lo
+*.la
+*.gcda
+*.gcno
+*.gcov
+
+# Code editor and IDE files
+*.swp
+*~
+*.tmp
+*.bak
+*.orig
+
+# OneDrive / OS metadata
+*.lnk
+Thumbs.db
+desktop.ini
+*.tmp
+*.temp
+
+# Generated folders
+build/
+Debug/
+Release/
+
+# Git folder itself should not be ignored
